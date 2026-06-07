@@ -26,8 +26,8 @@ La contribución central del trabajo es la demostración, en base a datos reales
 
 Este repositorio consta de los siguientes directorios:
 
-1. **Datos**. Los datos de mortalidad proceden del Registro de Mortalidad de la Comunitat Valenciana (Conselleria de Sanitat) y del INE. Por motivos de confidencialidad, **los microdatos no se incluyen en este repositorio**. La carpeta `data/` contiene únicamente los ficheros de conteos agregados (estimaciones de las distribuciones posteriores a partir de las que se realiza el análisis comparativo) en formato `.RData`.
-2. **
+1. **Datos**. Los datos de mortalidad proceden del Registro de Mortalidad de la Comunitat Valenciana (Conselleria de Sanitat) y del INE. Por motivos de confidencialidad, **los microdatos no se incluyen en este repositorio**. La carpeta `data/` contiene únicamente ... DEFINIR.
+2. **Modelos**. Esta carpeta contiene los
 
     - **Análisis comparativos incluidos:**
       - **WAIC**: comparación de bondad de ajuste predictivo entre los tres enfoques. El WAIC del M-modelo se contrasta con la suma de los 78 WAICs univariantes y con los WAICs de todas las versiones del modelo de corregionalización.
@@ -47,13 +47,10 @@ DiseaseMapping_TFM_BarreraCruz/
 ├── LICENSE
 ├── .gitignore
 │
-├── data/                        # Datos (no incluidos en el repositorio público)
-│   ├── raw/                     # Datos originales de mortalidad (GVA/INE)
+├── data/                        # Datos simulados
+│   ├── RDatas/                  # D
 │   ├── processed/               # Conteos O_ij y esperados E_ij por municipio y enfermedad
 │   └── spatial/                 # Shapefile y matriz de vecindad de los 542 municipios
-│
-│   [Dependencia externa: pNimble — https://github.com/MigueBeneito/pNimble/blob/main/RutinasNimble.0.2.R
-│   [Se carga vía source() desde cada script de modelo; no se incluye en este repositorio]
 │
 ├── models/                      # Scripts de especificación y ajuste de modelos
 │   ├── univariate/
@@ -84,10 +81,8 @@ DiseaseMapping_TFM_BarreraCruz/
 │   ├── tables/                  # Tablas (.csv, .tex)
 │   └── diagnostics/             # Diagnósticos MCMC (Rhat, trazas, etc.)
 │
-└── docs/                        # Documentación adicional
-    ├── disease_list.md          # Lista de las 78 enfermedades con código CIE-10
-    ├── mcmc_settings.md         # Configuración MCMC detallada
-    └── model_notation.md        # Notación matemática de los modelos
+│   [Dependencia externa: pNimble — https://github.com/MigueBeneito/pNimble/blob/main/RutinasNimble.0.2.R
+│   [Se carga vía source() desde cada script de modelo; no se incluye en este repositorio]
 ```
 
 --
