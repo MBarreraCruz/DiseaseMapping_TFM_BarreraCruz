@@ -94,6 +94,11 @@ DiseaseMapping_TFM_BarreraCruz/
             └── probH012.png   ··· probM090.png     # P(θ_ij > 0) (coreg. vs M-modelo)--
 ```
 
+## Resultados
+
+Los resultados del análisis comparativo pueden consultarse directamente en el HTML renderizado, sin necesidad de instalar R ni ejecutar ningún script:
+
+👉 **[https://mbarreracruz.github.io/DiseaseMapping_TFM_BarreraCruz/](https://mbarreracruz.github.io/DiseaseMapping_TFM_BarreraCruz/)**
 
 ## Dependencias:
 
