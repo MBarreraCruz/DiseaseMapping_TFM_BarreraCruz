@@ -11,7 +11,7 @@ Licencia de código: [MIT]
 
 ## Descripción
 
-Este repositorio contiene el código R asociado al Trabajo Fin de Máster (TFM) en Bioestadística de la Universidad de Valencia. El objetivo del trabajo es analizar el riesgo de mortalidad prematura por 78 causas de enfermedad en los 542 municipios de la Comunitat Valenciana durante el período 2000–2023, comparando tres familias de modelos bayesianos jerárquicos con estructura espacial:
+Este repositorio contiene el código en R asociado al Trabajo de Fin de Máster (TFM) en Bioestadística titulado *"Mapas de riesgo sin artefactos: el M-modelo como solución bayesiana multivariante para la toma de decisiones en salud pública a gran escala"*. El objetivo del trabajo es analizar el riesgo de mortalidad prematura por 78 causas de enfermedad en los 542 municipios de la Comunitat Valenciana durante el período 2000–2023, mediante la comparación de tres familias de modelos bayesianos jerárquicos con estructura espacial:
 
 1. **Modelos univariantes independientes** — 78 modelos CAR de Leroux ajustados de forma separada para cada enfermedad.
 2. **Modelo de corregionalización** — 53 versiones (50 ordenaciones aleatorias + ordenación original + directa + inversa) que permiten estudiar el artefacto de dependencia de orden introducido por la parametrización triangular.
@@ -20,7 +20,7 @@ Este repositorio contiene el código R asociado al Trabajo Fin de Máster (TFM) 
     - **Ordenación inversa** (ordenación de menor a mayor número de casos observados por enfermedad)
 3. **M-modelo** — modelo multivariante conjunto (Botella-Rocamora et al., 2015) que modela simultáneamente la estructura espacial y la dependencia entre enfermedades mediante una descomposición matricial invariante al orden.
 
-La contribución central del trabajo es la demostración, en base a datos reales, de que la parametrización del modelo de corregionalización induce dependencia de la posición de cada enfermedad en el vector de respuesta, mientras que el M-modelo es invariante al orden y computacionalmente más eficiente.
+La principal contribución del trabajo es demostrar, a partir de datos reales, las ventajas del enfoque multivariante. Asimismo, se pone de manifiesto que la parametrización basada en el modelo de corregionalización induce una dependencia respecto al orden de las enfermedades en el vector de respuesta, mientras que el M-modelo es invariante a dicho orden y presenta una mayor eficiencia computacional. Además de la comparación metodológica entre modelos, el trabajo demuestra la viabilidad computacional del análisis conjunto de 78 causas de mortalidad en 542 municipios durante un periodo de 23 años, constituyendo, hasta donde alcanza nuestro conocimiento, uno de los estudios de riesgo espacial multivariante de mayor dimensión realizados con datos reales. Los resultados muestran que, gracias al uso de herramientas modernas de programación probabilística, este tipo de análisis es actualmente factible y puede incorporarse de forma sistemática a tareas de vigilancia epidemiológica y apoyo a la toma de decisiones en salud pública.
 
 ## Contenido del repositorio
 
@@ -47,10 +47,10 @@ DiseaseMapping_TFM_BarreraCruz/
 ├── LICENSE
 ├── .gitignore
 │
-├── data/                        # Datos simulados
-│   ├── RDatas/                  # D
-│   ├── processed/               # Conteos O_ij y esperados E_ij por municipio y enfermedad
-│   └── spatial/                 # Shapefile y matriz de vecindad de los 542 municipios
+├── data/                        
+│   ├── RDatas/                  # 
+│   ├── processed/               # 
+
 │
 ├── models/                      # Scripts de especificación y ajuste de modelos
 │   ├── univariate/
