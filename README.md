@@ -102,4 +102,4 @@ DiseaseMapping_TFM_BarreraCruz/
 Los scripts de ajuste de modelos dependen de **pNimble**, una librería auxiliar que implementa `pNimble()` (wrapper paralelo para NIMBLE/HMC) y `load.leroux()` (distribución CAR de Leroux como función NIMBLE personalizada). El código se encuentra disponible en su repositorio público:
 
 > Repositorio original: <https://github.com/MigueBeneito/pNimble>  
-> Autor: Martínez-Beneito, M.A. (Universitat de València / FISABIO)
+> Autor: Martínez-Beneito, M.A. (Universitat de València)
