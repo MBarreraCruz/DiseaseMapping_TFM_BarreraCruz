@@ -47,40 +47,51 @@ DiseaseMapping_TFM_BarreraCruz/
 ├── LICENSE
 ├── .gitignore
 │
-├── data/                        
-│   ├── RDatas/                  # 
-│   ├── processed/               # 
-
+├── models/                              # Scripts de ajuste de modelos (NIMBLE/HMC)
+│   ├── Univariate/
+│   │   └── fit_Univariate.R             # Bucle sobre las 78 enfermedades (CAR de Leroux)
+│   ├── M_model/
+│   │   └── fit_Mmodel.R                 # M-modelo multivariante conjunto
+│   └── Coregionalization/
+│       └── fit_Coregionalization.R      # Modelo de corregionalización
+│                                        # Descomentando el bloque correspondiente
+│                                        # se ejecutan las distintas ordenaciones
+│                                        # (original / directa / inversa / aleatoria)
 │
-├── models/                       # Scripts de especificación y ajuste de modelos
-│   ├── univariate/
-│   |   └── fit_Univariate.R             # Bucle principal: ajusta los 78 modelos univariantes
-│   |
-│   ├── mmodel/
-│   │   └── fit_Mmodel.R                 # Ajuste del M-modelo conjunto
-│   │
-│   └── coregionalization/
-│       └── fit_Coregionalization.R      # Ajuste del modelo de Corregionalización.
-|                                        # El mismo código, al descomentar el bloque correspondiente, permite ejecutar las distintas ordenaciones.
+├── analysis/                            # Análisis comparativo y generación de figuras
+│   └── Analysis_Results.Rmd             # Documento reproducible — carga data/RData/
 │
-├── analysis/                    # Scripts de análisis comparativo
-│   ├── waic/
-│   │   └── compare_waic.R               # Cálculo y comparación de WAIC entre los tres enfoques
-│   ├── correlation/
-│   │   └── correlation_matrices.R       # Matrices de correlación entre efectos espaciales
-│   ├── variance_inflation/
-│   │   └── variance_inflation_coreg.R   # Análisis de inflación de varianza por posición (Spearman)
-│   └── maps/
-│       └── risk_maps.R                  # Mapas coropléticos de riesgo relativo (carto_munis)
+├── data/                                # Objetos precalculados (sin datos brutos de mortalidad)
+│   ├── RData/                           # Resúmenes de las distribuciones posteriores
+│   │   ├── Theta_mean_UNI.RData         # Medias posteriores θ — univariante (542 × 78)
+│   │   ├── theta_multi.RData            # Medias posteriores θ — M-modelo (542 × 78)
+│   │   ├── theta_coreg_original.RData   # Medias posteriores θ — coreg. original (542 × 78)
+│   │   ├── prob_pos_matrix.RData        # P(θ_ij > 0) — M-modelo (542 × 78)
+│   │   ├── prob_pos_matrix_coreg.RData  # P(θ_ij > 0) — coreg. original (542 × 78)
+│   │   ├── waics_uni.RData              # Vector de 78 WAICs univariantes
+│   │   ├── waic_mmodel.RData            # WAIC escalar del M-modelo
+│   │   ├── waic_coreg_Original.RData    # WAIC — coreg. ordenación original
+│   │   ├── waic_coreg_directa_inversa.RData  # WAICs ordenaciones directa e inversa
+│   │   ├── waic_coreg_vec.RData         # Vector de 50 WAICs (ordenaciones aleatorias)
+│   │   ├── var_theta_coreg.RData        # Lista de varianzas de θ por permutación
+│   │   ├── orden_aleatorio_list.RData   # Lista de 50 vectores de permutación
+│   │   ├── df_cor.RData                 # Correlaciones entre enfermedades (formato largo)
+│   │   └── variabilidad_por_enfermedad.RData  # Rango de inflación de varianza por enfermedad
+│   └── spatial/
+│       └── CartoMunis542.RData          # Cartografía de los 542 municipios (IGN/INE)
 │
-├── results/                     # Salidas generadas (no versionadas, generadas localmente)
-│   ├── figures/                 # Figuras (.pdf, .png)
-│   ├── tables/                  # Tablas (.csv, .tex)
-│   └── diagnostics/             # Diagnósticos MCMC (Rhat, trazas, etc.)
+├── docs/                                # HTML renderizado — visualización directa
+│   └── Analysis_Results.html            # Resultados con figuras (GitHub Pages)
 │
-│   [Dependencia externa: pNimble — https://github.com/MigueBeneito/pNimble/blob/main/RutinasNimble.0.2.R
-│   [Se carga vía source() desde cada script de modelo; no se incluye en este repositorio]
-```
+└── results/
+    └── output/                          # Figuras generadas por Analysis_Results.Rmd
+        ├── boxplot_waic.png
+        ├── correlacion_plot.png
+        ├── varianza_plot.png
+        ├── varianza_enfermedad.png
+        ├── I_Moran.png
+        ├── mapa_H012.png  ··· mapa_M090.png    # θ estimado (3 modelos, escala común)
+        └── probH012.png   ··· probM090.png     # P(θ_ij > 0) (coreg. vs M-modelo)```
 
 --
 
