@@ -47,6 +47,9 @@ DiseaseMapping_TFM_BarreraCruz/
 ├── LICENSE
 ├── .gitignore
 │
+├── docs/                                # HTML renderizado — visualización directa
+|   └── Analysis_Results.html            # Resultados con figuras (GitHub Pages)
+|
 ├── models/                              # Scripts de ajuste de modelos (NIMBLE/HMC)
 │   ├── Univariate/
 │   │   └── fit_Univariate.R             # Bucle sobre las 78 enfermedades (CAR de Leroux)
@@ -79,9 +82,6 @@ DiseaseMapping_TFM_BarreraCruz/
     │   │   └── variabilidad_por_enfermedad.RData  # Rango de inflación de varianza por enfermedad
     │   └── spatial/
     │       └── CartoMunis542.RData          # Cartografía de los 542 municipios (IGN/INE)
-    │
-    ├── docs/                            # HTML renderizado — visualización directa
-    │   └── Analysis_Results.html        # Resultados con figuras (GitHub Pages)
     │
     └── results/
         └── output/                      # Figuras generadas por Analysis_Results.Rmd
