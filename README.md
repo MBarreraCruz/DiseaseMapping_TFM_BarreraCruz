@@ -100,6 +100,8 @@ Los resultados del análisis comparativo pueden consultarse directamente en el H
 
 👉 **[https://mbarreracruz.github.io/DiseaseMapping_TFM_BarreraCruz/](https://mbarreracruz.github.io/DiseaseMapping_TFM_BarreraCruz/)**
 
+El HTML contiene exclusivamente el código y las figuras del análisis comparativo (WAIC, matrices de correlación, inflación de varianza, I de Moran y mapas de riesgo), sin texto explicativo. El contexto metodológico e interpretación de los resultados se encuentran en la memoria del TFM.
+
 ## Dependencias:
 
 ### pNimble (Martínez-Beneito, M.A.)
