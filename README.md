@@ -52,19 +52,16 @@ DiseaseMapping_TFM_BarreraCruz/
 │   ├── processed/               # 
 
 │
-├── models/                      # Scripts de especificación y ajuste de modelos
+├── models/                       # Scripts de especificación y ajuste de modelos
 │   ├── univariate/
-│   │   ├── fit_univariate_all.R          # Bucle principal: ajusta los 78 modelos univariantes
-│   │   └── model_leroux_univariate.R     # Especificación NIMBLE del CAR de Leroux univariante
-│   │
+│   |   └── fit_Univariate.R             # Bucle principal: ajusta los 78 modelos univariantes
+│   |
 │   ├── mmodel/
-│   │   ├── fit_mmodel.R                  # Ajuste del M-modelo conjunto
-│   │   └── model_mmodel_nimble.R         # Especificación NIMBLE del M-modelo
+│   │   └── fit_Mmodel.R                 # Ajuste del M-modelo conjunto
 │   │
 │   └── coregionalization/
-│       ├── fit_coreg_single.R            # Ajuste de una ordenación concreta
-│       ├── fit_coreg_permutations.R      # Bucle: 50 ordenaciones aleatorias + directa + inversa
-│       └── model_coreg_nimble.R          # Especificación NIMBLE del modelo de corregionalización
+│       └── fit_Coregionalization.R      # Ajuste del modelo de Corregionalización.
+|                                        # El mismo código, al descomentar el bloque correspondiente, permite ejecutar las distintas ordenaciones.
 │
 ├── analysis/                    # Scripts de análisis comparativo
 │   ├── waic/
