@@ -92,6 +92,8 @@ DiseaseMapping_TFM_BarreraCruz/
             ├── I_Moran.png
             ├── mapa_H012.png  ··· mapa_M090.png   # θ estimado (3 modelos, escala común)
             └── probH012.png   ··· probM090.png     # P(θ_ij > 0) (coreg. vs M-modelo)--
+```
+
 
 ## Dependencias:
 
