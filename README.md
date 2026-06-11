@@ -35,7 +35,7 @@ Este repositorio consta de los siguientes directorios:
       - **Mapas de riesgo**: mapas coropléticos para enfermedades seleccionadas, comparando los tres modelos.
       - **Test de Welch**: comparación de correlaciones cruce-sexo vs. correlaciones intra-sexo.
 
---
+---
 
 ## Estructura del repositorio
 
