@@ -26,14 +26,14 @@ Este repositorio consta de los siguientes directorios:
 
 1. **Datos**. Los datos de mortalidad proceden del Registro de Mortalidad de la Comunitat Valenciana (Conselleria de Sanitat) y del INE. Por motivos de confidencialidad, **los microdatos y conteos por municipio no se incluyen en este repositorio**. La carpeta `analysis/data/` contiene únicamente resúmenes de las distribuciones posteriores (medias de los efectos espaciales θ y probabilidades P(θ > 0) por municipio y causa, WAICs, matrices de correlación e índices de inflación de varianza) en formato `.RData`, a partir de los cuales se generan todas las figuras del análisis. 
 
-2. **Modelos**. Esta carpeta contiene los
+2. **Modelos**. La carpeta `models/` contiene los scripts de ajuste de los tres modelos implementados (univariante, M-modelo y corregionalización). Los scripts no son autoejecutables en ausencia de los datos de mortalidad, pero están completamente documentados y pueden adaptarse a otros conjuntos de datos con estructura similar.
 
-    - **Análisis comparativos incluidos:**
-      - **WAIC**: comparación de bondad de ajuste predictivo entre los tres enfoques. El WAIC del M-modelo se contrasta con la suma de los 78 WAICs univariantes y con los WAICs de todas las versiones del modelo de corregionalización.
-      - **Matrices de correlación**: entre efectos espaciales estimados por cada modelo, para los dos sexos.
-      - **Inflación de varianza**: correlación de Spearman entre la posición de cada enfermedad en el vector de respuesta y el ratio de varianza espacial estimada respecto al modelo de referencia.
-      - **Mapas de riesgo**: mapas coropléticos para enfermedades seleccionadas, comparando los tres modelos.
-      - **Test de Welch**: comparación de correlaciones cruce-sexo vs. correlaciones intra-sexo.
+3. **Análisis comparativo**. La carpeta `analysis/` contiene el documento `Analysis_Results.Rmd` con el código que genera todas las figuras y tablas del TFM a partir de los objetos precalculados de `analysis/data/RData/`. Los análisis incluidos son:
+   - **WAIC**: comparación de bondad de ajuste predictivo entre los tres enfoques. El WAIC del M-modelo se contrasta con la suma de los 78 WAICs univariantes y con los WAICs de todas las versiones del modelo de corregionalización.
+   - **Matrices de correlación**: entre efectos espaciales estimados por cada modelo, para los dos sexos.
+   - **Inflación de varianza**: correlación de Spearman entre la posición de cada enfermedad en el vector de respuesta y el ratio de varianza espacial estimada respecto al modelo de referencia.
+   - **Mapas de riesgo**: mapas coropléticos para enfermedades seleccionadas, comparando los tres modelos.
+   - **Test de Welch**: comparación de correlaciones entre distintos subgrupos.
 
 ---
 
