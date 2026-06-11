@@ -20,8 +20,6 @@ Este repositorio contiene el código en R asociado al Trabajo de Fin de Máster 
     - **Ordenación inversa** (ordenación de menor a mayor número de casos observados por enfermedad)
 3. **M-modelo** — modelo multivariante conjunto (Botella-Rocamora et al., 2015) que modela simultáneamente la estructura espacial y la dependencia entre enfermedades mediante una descomposición matricial invariante al orden.
 
-La principal contribución del trabajo es demostrar, a partir de datos reales, las ventajas del enfoque multivariante. Asimismo, se pone de manifiesto que la parametrización basada en el modelo de corregionalización induce una dependencia respecto al orden de las enfermedades en el vector de respuesta, mientras que el M-modelo es invariante a dicho orden y presenta una mayor eficiencia computacional. Además de la comparación metodológica entre modelos, el trabajo demuestra la viabilidad computacional del análisis conjunto de 78 causas de mortalidad en 542 municipios durante un periodo de 23 años, constituyendo, hasta donde alcanza nuestro conocimiento, uno de los estudios de riesgo espacial multivariante de mayor dimensión realizados con datos reales. Los resultados muestran que, gracias al uso de herramientas modernas de programación probabilística, este tipo de análisis es actualmente factible y puede incorporarse de forma sistemática a tareas de vigilancia epidemiológica y apoyo a la toma de decisiones en salud pública.
-
 ## Contenido del repositorio
 
 Este repositorio consta de los siguientes directorios:
