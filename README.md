@@ -26,7 +26,8 @@ La principal contribución del trabajo es demostrar, a partir de datos reales, l
 
 Este repositorio consta de los siguientes directorios:
 
-1. **Datos**. Los datos de mortalidad proceden del Registro de Mortalidad de la Comunitat Valenciana (Conselleria de Sanitat) y del INE. Por motivos de confidencialidad, **los microdatos no se incluyen en este repositorio**. La carpeta `data/` contiene únicamente ... DEFINIR.
+1. **Datos**. Los datos de mortalidad proceden del Registro de Mortalidad de la Comunitat Valenciana (Conselleria de Sanitat) y del INE. Por motivos de confidencialidad, **los microdatos y conteos por municipio no se incluyen en este repositorio**. La carpeta `analysis/data/` contiene únicamente resúmenes de las distribuciones posteriores (medias de los efectos espaciales θ y probabilidades P(θ > 0) por municipio y causa, WAICs, matrices de correlación e índices de inflación de varianza) en formato `.RData`, a partir de los cuales se generan todas las figuras del análisis. 
+
 2. **Modelos**. Esta carpeta contiene los
 
     - **Análisis comparativos incluidos:**
