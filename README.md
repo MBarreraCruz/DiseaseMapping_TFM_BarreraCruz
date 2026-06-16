@@ -47,7 +47,7 @@ DiseaseMapping_TFM_BarreraCruz/
 ├── .gitignore
 │
 ├── docs/                                # HTML renderizado — visualización directa
-|   └── index.html            # Resultados con figuras (GitHub Pages)
+|   └── index.html                       # Resultados con figuras (GitHub Pages)
 |
 ├── models/                              # Scripts de ajuste de modelos (NIMBLE/HMC)
 │   ├── Univariate/
